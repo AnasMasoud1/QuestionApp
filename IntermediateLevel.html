@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Intermediate Level</title>
+<link rel="icon" type="image/x-icon" href="images/icons8-q-64.png">
+    <link href="StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="im">
+                    <img src="images/navimg.jpg" width="200" />
+
+                </li>
+            </ul>
+            <ul>
+                <li><h1 id="mstyle">Intermediate Level</h1></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <form method="get">
+            <fieldset class="fset2">
+                <legend>Intermediate Level</legend>
+                <div id="arrowimg">
+                    <img src="images/downArrow.gif" width="200" height="250" />
+
+                </div>
+
+                <h3> Question 1 :</h3>
+                <label id="mlq1"></label>
+                <input id="miq1" type="number" name="q1" required />
+                <br />
+                <br />
+                <h3> Question 2 :</h3>
+                <label id="mlq2"></label>
+                <input id="miq2" type="number" name="q2" required />
+                <br />
+                <br />
+                <h3> Question 3 :</h3>
+                <label id="mlq3"></label>
+                <input id="miq3" type="number" name="q3" required />
+                <br />
+                <br />
+                <h3> Question 4 :</h3>
+                <label id="mlq4"></label>
+                <input id="miq4" type="number" name="q4" required />
+                <br />
+                <br />
+                <h3> Question 5 :</h3>
+                <label id="mlq5"></label>
+                <input id="miq5" type="number" name="q5" required />
+                <br />
+                <br />
+                <h3> Question 6 :</h3>
+                <label id="mlq6"></label>
+                <input id="miq6" type="number" name="q6" required />
+                <br />
+                <br />
+                <h3> Question 7 :</h3>
+                <label id="mlq7"></label>
+                <input id="miq7" type="number" name="q7" required />
+                <br />
+                <br />
+                <h3> Question 8 :</h3>
+                <label id="mlq8"></label>
+                <input id="miq8" type="number" name="q8" required />
+                <br />
+                <br />
+                <h3> Question 9 :</h3>
+                <label id="mlq9"></label>
+                <input id="miq9" type="number" name="q9" required />
+                <br />
+                <br />
+                <h3> Question 10 :</h3>
+                <label id="mlq10"></label>
+                <input id="miq10" type="number" name="q10" required />
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <input type="reset" class="login-button" />
+            </fieldset>
+        </form>
+
+        <button class="login-button" onclick="Game()">Submit</button>
+       
+    </main>
+    <!--<script>
+
+
+        var win  = new Audio('Audio/Audio_win.mp3');
+        var fail = new Audio('Audio/Audio_fail.mp3');
+
+        var randomNo1 = Math.round(Math.random() * 10) ;
+        var randomNo2 = Math.round(Math.random() * 5 );
+
+
+        document.getElementById('mlq1').innerHTML = randomNo1 + "*" + randomNo2 ;
+        var jmlq1 = randomNo1 * randomNo2 ;
+        NewRandom();
+        document.getElementById('mlq2').innerHTML = randomNo1 + "/" + randomNo2 ;
+        var jmlq2 = randomNo1 / randomNo2 ;
+        NewRandom();
+        document.getElementById('mlq3').innerHTML = randomNo1 + "*" + randomNo2 ;
+        var jmlq3 = randomNo1 * randomNo2 ;
+        NewRandom();
+        document.getElementById('mlq4').innerHTML = randomNo1 + "+" + randomNo2 ;
+        var jmlq4 = randomNo1 + randomNo2 ;
+        NewRandom();
+        document.getElementById('mlq5').innerHTML = randomNo1 + "*" + randomNo2 ;
+        var jmlq5 = randomNo1 * randomNo2 ;
+        NewRandom();
+        document.getElementById('mlq6').innerHTML = randomNo1 + "-" + randomNo2;
+        var jmlq6 = randomNo1 - randomNo2;
+        NewRandom();
+        document.getElementById('mlq7').innerHTML = randomNo1 + "/" + randomNo2;
+        var jmlq7 = randomNo1 / randomNo2;
+        NewRandom();
+        document.getElementById('mlq8').innerHTML = randomNo1 + "*" + randomNo2;
+        var jmlq8 = randomNo1 * randomNo2;
+        NewRandom();
+        document.getElementById('mlq9').innerHTML = randomNo1 + "/" + randomNo2;
+        var jmlq9 = randomNo1 / randomNo2;
+        NewRandom();
+        document.getElementById('mlq10').innerHTML = randomNo1 + "+" + randomNo2;
+        var jmlq10 = randomNo1 + randomNo2;
+
+        const Game = () => {
+            var jmiq1 = document.getElementById("miq1 ").value;
+            var jmiq2 = document.getElementById("miq2 ").value;
+            var jmiq3 = document.getElementById("miq3 ").value;
+            var jmiq4 = document.getElementById("miq4 ").value;
+            var jmiq5 = document.getElementById("miq5 ").value;
+            var jmiq6 = document.getElementById("miq6 ").value;
+            var jmiq7 = document.getElementById("miq7 ").value;
+            var jmiq8 = document.getElementById("miq8 ").value;
+            var jmiq9 = document.getElementById("miq9 ").value;
+            var jmiq10 = document.getElementById("miq10").value;
+
+            if (jmiq1 == jmlq1) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (jmiq2 == jmlq2) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (jmiq3 == jmlq3) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (jmiq4 == jmlq4) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (jmiq5 == jmlq5) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (jmiq6 == jmlq6) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (jmiq7 == jmlq7) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (jmiq8 == jmlq8) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (jmiq9 == jmlq9) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (jmiq10 == jmlq10) {
+                score = score + 2;
+                NewRandom();
+            }
+            if (score >= 15) {
+                win.play();
+                document.body.style.backgroundImage = "url('images/firework-m.gif')";
+                setTimeout(() => firwork(), 100);
+
+            }
+            if (score < 15) {
+                alert("Game Over.. your Score is :   " + score + "     Press OK to Again Intermediate Level");
+                window.location = "IntermediateLevel.html";
+
+            }
+        };
+
+        function NewRandom() {
+
+            randomNo1 = Math.floor(Math.random() * 10 + 1)
+            randomNo2 = Math.floor(Math.random() * 5 + 1)
+
+        }
+        function firwork() {
+            alert("Bravo Your Score is :   " + score + "    Please , Press OK to move Hard Level");
+            window.location ="HardLevel.html";
+        }
+    </script>-->
+    <script>
+
+
+
+
+        var fail = new Audio('Audio/Audio_fail.mp3');
+        var win = new Audio('Audio/Audio_win.mp3');
+
+
+
+        var score = 0;
+        var count = 0;
+
+        var randomNumber1 = Math.round(Math.random() * 10);
+        var randomNumber2 = Math.round(Math.random() * 10);
+
+        document.getElementById('mlq1').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jmlq1 = randomNumber1 + randomNumber2;
+
+        NewRandom();
+        document.getElementById('mlq2').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jmlq2 = randomNumber1 - randomNumber2;
+
+
+
+        NewRandom();
+        document.getElementById('mlq3').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jmlq3 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('mlq4').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jmlq4 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('mlq5').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jmlq5 = randomNumber1 - randomNumber2;
+        document.getElementById('mlq6').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jmlq6 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('mlq7').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jmlq7 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('mlq8').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jmlq8 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('mlq9').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jmlq9 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('mlq10').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jmlq10 = randomNumber1 + randomNumber2;
+        NewRandom();
+      
+
+        const Game = () => {
+            var jmiq1 = document.getElementById('miq1').value;
+            var jmiq2 = document.getElementById('miq2').value;
+            var jmiq3 = document.getElementById('miq3').value;
+            var jmiq4 = document.getElementById('miq4').value;
+            var jmiq5 = document.getElementById('miq5').value;
+            var jmiq6 = document.getElementById('miq6').value;
+            var jmiq7 = document.getElementById('miq7').value;
+            var jmiq8 = document.getElementById('miq8').value;
+            var jmiq9 = document.getElementById('miq9').value;
+            var jmiq10= document.getElementById('miq10').value;
+
+            if (jmiq1 == jmlq1) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jmiq2 == jmlq2) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jmiq3 == jmlq3) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jmiq4 == jmlq4) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jmiq5 == jmlq5) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+            }
+            if (jmiq6 == jmlq6) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+            if (jmiq7 == jmlq7) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jmiq8 == jmlq8) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+         
+
+            if (jmiq9 == jmlq9) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jmiq10 == jmlq10) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+               
+            }
+            if (score >= 15) {
+
+                document.body.style.backgroundImage = "url('images/firework-m.gif')";
+                win.play();
+                setTimeout(() => firwork(), 100);
+
+
+
+            }
+
+            if (score < 15) {
+
+
+                fail.play();
+                alert("OOOh Nooo your score = " + score + "    please press OK to Again");
+
+                window.location = "IntermediateLevel.html";
+
+            }
+
+
+
+
+        };
+
+
+        function firwork() {
+            alert(" Great !! your score = " + score + "     please press Ok to move Intermediatel Level");
+
+
+            window.location = "HardLevel.html";
+        }
+
+        function NewRandom() {
+            randomNumber1 = Math.floor(Math.random() * 10 + 1)
+            randomNumber2 = Math.floor(Math.random() * 10 + 1)
+
+        }
+
+
+
+
+    </script>
+</body>
+</html>

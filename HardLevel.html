@@ -1,0 +1,1577 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hard Level</title>
+    <link rel="icon" type="image/x-icon" href="images/icons8-q-64.png">
+    <link href="StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="im">
+                    <img src="images/navimg.jpg" width="200" />
+
+                </li>
+            </ul>
+            <ul>
+                <li><h1 id="hstyle">Hard Level</h1></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <form method="get">
+            <fieldset class="fset3">
+                <legend>Hard Level</legend>
+                <div id="arrowimg">
+                    <img src="images/downArrow.gif" width="200" height="250" />
+
+                </div>
+
+                <h3> Question 1 :</h3>
+                <label id="hlq1"></label>
+                <input id="hiq1" type="number" name="q1" />
+                <br />
+                <br />
+                <h3> Question 2 :</h3>
+                <label id="hlq2"></label>
+                <input id="hiq2" type="number" name="q2" />
+                <br />
+                <br />
+                <h3> Question 3 :</h3>
+                <label id="hlq3"></label>
+                <input id="hiq3" type="number" name="q3" />
+                <br />
+                <br />
+                <h3> Question 4 :</h3>
+                <label id="hlq4"></label>
+                <input id="hiq4" type="number" name="q4" />
+                <br />
+                <br />
+                <h3> Question 5 :</h3>
+                <label id="hlq5"></label>
+                <input id="hiq5" type="number" name="q5" />
+                <br />
+                <br />
+                <h3> Question 6 :</h3>
+                <label id="hlq6"></label>
+                <input id="hiq6" type="number" name="q6" />
+                <br />
+                <br />
+                <h3> Question 7 :</h3>
+                <label id="hlq7"></label>
+                <input id="hiq7" type="number" name="q7" />
+                <br />
+                <br />
+                <h3> Question 8 :</h3>
+                <label id="hlq8"></label>
+                <input id="hiq8" type="number" name="q8" />
+                <br />
+                <br />
+                <h3> Question 9 :</h3>
+                <label id="hlq9"></label>
+                <input id="hiq9" type="number" name="q9" />
+                <br />
+                <br />
+                <h3> Question 10 :</h3>
+                <label id="hlq10"></label>
+                <input id="hiq10" type="number" name="q10" />
+                <br />
+                <br />
+                <h3> Question 11 :</h3>
+                <label id="hlq11"></label>
+                <input id="hiq11" type="number" name="q11" />
+                <br />
+                <br />
+                <h3> Question 12 :</h3>
+                <label id="hlq12"></label>
+                <input id="hiq12" type="number" name="q12" />
+                <br />
+                <br />
+                <h3> Question 13 :</h3>
+                <label id="hlq13"></label>
+                <input id="hiq13" type="number" name="q13" />
+                <br />
+                <br />
+                <h3> Question 14 :</h3>
+                <label id="hlq14"></label>
+                <input id="hiq14" type="number" name="q14" />
+                <br />
+                <br />
+                <h3> Question 15 :</h3>
+                <label id="hlq15"></label>
+                <input id="hiq15" type="number" name="q15" />
+                <br />
+                <br />
+                <h3> Question 16 :</h3>
+                <label id="hlq16"></label>
+                <input id="hiq16" type="number" name="q16" />
+                <br />
+                <br />
+                <h3> Question 17 :</h3>
+                <label id="hlq17"></label>
+                <input id="hiq17" type="number" name="q17" />
+                <br />
+                <br />
+                <h3> Question 18 :</h3>
+                <label id="hlq18"></label>
+                <input id="hiq18" type="number" name="q18" />
+                <br />
+                <br />
+                <h3> Question 19 :</h3>
+                <label id="hlq19"></label>
+                <input id="hiq19" type="number" name="q19" />
+                <br />
+                <br />
+                <h3> Question 20 :</h3>
+                <label id="hlq20"></label>
+                <input id="hiq20" type="number" name="q20" />
+                <br />
+                <br />
+                <h3> Question 21 :</h3>
+                <label id="hlq21"></label>
+                <input id="hiq21" type="number" name="q21" />
+                <br />
+                <br />
+                <h3> Question 22 :</h3>
+                <label id="hlq22"></label>
+                <input id="hiq22" type="number" name="q22" />
+                <br />
+                <br />
+                <h3> Question 23 :</h3>
+                <label id="hlq23"></label>
+                <input id="hiq23" type="number" name="q23" />
+                <br />
+                <br />
+                <h3> Question 24 :</h3>
+                <label id="hlq24"></label>
+                <input id="hiq24" type="number" name="q24" />
+                <br />
+                <br />
+                <h3> Question 25 :</h3>
+                <label id="hlq25"></label>
+                <input id="hiq25" type="number" name="q25" />
+                <br />
+                <br />
+                <br />
+                <br />
+
+
+                <input type="reset" class="login-button" />
+            </fieldset>
+        </form>
+        <button class="login-button" onclick="Game()">Submit</button>
+    </main>
+
+    <script>
+
+
+
+
+        var fail = new Audio('Audio/Audio_fail.mp3');
+        var win = new Audio('Audio/Audio_win.mp3');
+
+
+
+        var score = 0;
+        var count = 0;
+
+        var randomNumber1 = Math.round(Math.random() * 10)+5;
+        var randomNumber2 = Math.round(Math.random() * 10)+1;
+        var randomNumber3 = Math.round(Math.random() * 5) + 1;
+
+        document.getElementById('hlq1').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq1 = randomNumber1 + randomNumber2;
+
+        NewRandom();
+        document.getElementById('hlq2').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq2 = randomNumber1 - randomNumber2;
+
+
+
+        NewRandom();
+        document.getElementById('hlq3').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq3 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('hlq4').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq4 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('hlq5').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq5 = randomNumber1 - randomNumber2;
+        document.getElementById('hlq6').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq6 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('hlq7').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq7 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('hlq8').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq8 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('hlq9').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq9 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('hlq10').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq10 = randomNumber1 + randomNumber2;
+        NewRandom();
+
+        document.getElementById('hlq11').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq11 = randomNumber1 + randomNumber2;
+
+        NewRandom();
+        document.getElementById('hlq12').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq12 = randomNumber1 - randomNumber2;
+
+
+
+        NewRandom();
+        document.getElementById('hlq13').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq13 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('hlq14').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq14 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('hlq15').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq15 = randomNumber1 - randomNumber2;
+        document.getElementById('hlq16').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq16 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('hlq17').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq17 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('hlq18').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq18 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('hlq19').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq19 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('hlq20').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq20 = randomNumber1 + randomNumber2;
+        NewRandom();
+
+        document.getElementById('hlq21').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq21 = randomNumber1 + randomNumber2;
+
+        NewRandom();
+        document.getElementById('hlq22').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq22 = randomNumber1 - randomNumber2;
+
+
+
+        NewRandom();
+        document.getElementById('hlq23').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq23 = randomNumber1 + randomNumber2;
+        NewRandom();
+        document.getElementById('hlq24').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq24 = randomNumber1 - randomNumber2;
+        NewRandom();
+        document.getElementById('hlq25').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq25 = randomNumber1 - randomNumber2;
+      
+
+
+        const Game = () => {
+            var jhiq1 = document.getElementById('hiq1').value;
+            var jhiq2 = document.getElementById('hiq2').value;
+            var jhiq3 = document.getElementById('hiq3').value;
+            var jhiq4 = document.getElementById('hiq4').value;
+            var jhiq5 = document.getElementById('hiq5').value;
+            var jhiq6 = document.getElementById('hiq6').value;
+            var jhiq7 = document.getElementById('hiq7').value;
+            var jhiq8 = document.getElementById('hiq8').value;
+            var jhiq9 = document.getElementById('hiq9').value;
+            var jhiq10= document.getElementById('hiq10').value;
+            var jhiq11 = document.getElementById('hiq11').value;
+            var jhiq12 = document.getElementById('hiq12').value;
+            var jhiq13 = document.getElementById('hiq13').value;
+            var jhiq14 = document.getElementById('hiq14').value;
+            var jhiq15 = document.getElementById('hiq15').value;
+            var jhiq16 = document.getElementById('hiq16').value;
+            var jhiq17 = document.getElementById('hiq17').value;
+            var jhiq18 = document.getElementById('hiq18').value;
+            var jhiq19 = document.getElementById('hiq19').value;
+            var jhiq20 = document.getElementById('hiq20').value;
+            var jhiq21 = document.getElementById('hiq21').value;
+            var jhiq22 = document.getElementById('hiq22').value;
+            var jhiq23 = document.getElementById('hiq23').value;
+            var jhiq24 = document.getElementById('hiq24').value;
+            var jhiq25 = document.getElementById('hiq25').value;
+           
+
+            if (jhiq1 == jhlq1) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq2 == jhlq2) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq3 == jhlq3) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq4 == jhlq4) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq5 == jhlq5) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+            }
+            if (jhiq6 == jhlq6) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+            if (jhiq7 == jhlq7) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq8 == jhlq8) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+
+
+            if (jhiq9 == jhlq9) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq10 == jhlq10) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+
+            }
+            if (jhiq11 == jhlq11) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq12 == jhlq12) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq13 == jhlq13) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq14 == jhlq14) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq15 == jhlq15) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+            }
+            if (jhiq16 == jhlq16) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+            if (jhiq17 == jhlq17) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq18 == jhlq18) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+
+
+            if (jhiq19 == jhlq19) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq20 == jhlq20) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+
+            }
+            if (jhiq21 == jhlq21) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq22 == jhlq22) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq23 == jhlq23) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq24 == jhlq24) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+
+            }
+
+            if (jhiq25 == jhlq25) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom();
+            }
+            if (score >= 45) {
+
+                document.body.style.backgroundImage = "url('images/firework-m.gif')";
+                win.play();
+                setTimeout(() => firwork(), 100);
+
+
+
+            }
+
+            if (score < 45) {
+
+
+                fail.play();
+                alert("OOOh Nooo your score = " + score + "    please press OK to Again");
+
+                window.location = "HardLevel.html";
+
+            }
+
+
+
+
+        };
+
+
+        function firwork() {
+            alert(" Great !! your score = " + score + "     please press Ok to move Intermediatel Level");
+
+
+            window.location = "HardLevel.html";
+        }
+
+        function NewRandom() {
+            randomNumber1 = Math.floor(Math.random() * 10 + 5)
+            randomNumber2 = Math.floor(Math.random() * 5 + 1)
+            randomNumber3 = Math.floor(Math.random() * 5 + 1)
+        }
+
+
+
+
+    </script>
+
+    <!--<script>
+
+        var fail = new Audio('Audio/Audio_fail.mp3');
+        var win = new Audio('Audio/Audio_win.mp3');
+
+        var score = 0;
+        var count = 0;
+
+        var randomNumber1 = Math.round(Math.random() * 10) + 5;
+        var randomNumber2 = Math.round(Math.random() * 5) + 1;
+        var randomNumber3 = Math.floor(Math.random() * 5) + 1;
+
+        document.getElementById('hlq1').innerHTML = randomNumber1 + '*' + randomNumber2 + '-' + randomNumber3;
+        var jhlq1 = randomNumber1 * randomNumber2 - randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq2').innerHTML = randomNumber1 + '/' + randomNumber2 + '+' + randomNumber3;
+        var jhlq2 = randomNumber1 / randomNumber2 + randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq3').innerHTML = randomNumber1 + '*' + randomNumber2 + '-' + randomNumber3;
+        var jhlq3 = randomNumber1 * randomNumber2 - randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq4').innerHTML = randomNumber1 + '/' + randomNumber2 + '+' + randomNumber3;
+        var jhlq4 = randomNumber1 / randomNumber2 + randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq5').innerHTML = randomNumber1 + '-' + randomNumber2 + '+' + randomNumber3;
+        var jhlq5 = randomNumber1 - randomNumber2 + randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq6').innerHTML = randomNumber1 + '+' + randomNumber2 + '-' + randomNumber3;
+        var jhlq6 = randomNumber1 + randomNumber2 - randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq7').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq7 = randomNumber1 * randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq8').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq8 = randomNumber1 / randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq9').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq9 = randomNumber1 * randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq10').innerHTML = randomNumber1 + '-' + randomNumber2 + '+' + randomNumber3;
+        var jhlq10 = randomNumber1 - randomNumber2 + randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq11').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq11 = randomNumber1 * randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq12').innerHTML = randomNumber1 + '/' + randomNumber2 + '+' + randomNumber2;
+        var jhlq12 = randomNumber1 / randomNumber2 + randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq13').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq13 = randomNumber1 * randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq14').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq14 = randomNumber1 / randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq15').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq15 = randomNumber1 - randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq16').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq16 = randomNumber1 + randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq17').innerHTML = randomNumber1 + '*' + randomNumber2 + '-' + randomNumber3;
+        var jhlq17 = randomNumber1 * randomNumber2 - randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq18').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq18 = randomNumber1 / randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq19').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq19 = randomNumber1 * randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq20').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq20 = randomNumber1 - randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq21').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq21 = randomNumber1 * randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq22').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq22 = randomNumber1 / randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq23').innerHTML = randomNumber1 + '*' + randomNumber2 + '*' + randomNumber3;
+        var jhlq23 = randomNumber1 * randomNumber2 * randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq24').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq24 = randomNumber1 / randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq25').innerHTML = randomNumber1 + '-' + randomNumber2 + '*' + randomNumber3;
+        var jhlq25 = randomNumber1 - randomNumber2 * randomNumber3;
+
+
+
+        const Game = () => {
+             var jhiq1 = document.getElementById('hiq1').value;
+             var jhiq2 = document.getElementById('hiq2').value;
+             var jhiq3 = document.getElementById('hiq3').value;
+             var jhiq4 = document.getElementById('hiq4').value;
+             var jhiq5 = document.getElementById('hiq5').value;
+             var jhiq6 = document.getElementById('hiq6').value;
+             var jhiq7 = document.getElementById('hiq7').value;
+             var jhiq8 = document.getElementById('hiq8').value;
+             var jhiq9 = document.getElementById('hiq9').value;
+            var jhiq10 = document.getElementById('hiq10').value;
+            var jhiq11 = document.getElementById('hiq11').value;
+            var jhiq12 = document.getElementById('hiq12').value;
+            var jhiq13 = document.getElementById('hiq13').value;
+            var jhiq14 = document.getElementById('hiq14').value;
+            var jhiq15 = document.getElementById('hiq15').value;
+            var jhiq16 = document.getElementById('hiq16').value;
+            var jhiq17 = document.getElementById('hiq17').value;
+            var jhiq18 = document.getElementById('hiq18').value;
+            var jhiq19 = document.getElementById('hiq19').value;
+            var jhiq20 = document.getElementById('hiq20').value;
+            var jhiq21 = document.getElementById('hiq21').value;
+            var jhiq22 = document.getElementById('hiq22').value;
+            var jhiq23 = document.getElementById('hiq23').value;
+            var jhiq24 = document.getElementById('hiq24').value;
+            var jhiq25 = document.getElementById('hiq25').value;
+
+            if (jhiq1 == jhlq1) {
+
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+            }
+
+            if (jhiq2 == jhlq2) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq3 == jhlq3) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq4 == jhlq4) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq5 == jhlq5) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+
+
+            }
+
+
+            if (jhiq6 == jhlq6) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+            }
+            if (jhiq7 == jhlq7) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+            if (jhiq8 == jhlq8) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+            if (jhiq9 == jhlq9) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+            if (jhiq10 == jhlq10) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+            if (jhiq11 == jhlq11) {
+
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+            }
+
+            if (jhiq12 == jhlq12) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq13 == jhlq13) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq14 == jhlq14) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq15 == jhlq15) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+
+
+            }
+
+
+            if (jhiq16 == jhlq16) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+            }
+            if (jhiq17 == jhlq17) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+            if (jhiq18 == jhlq18) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+            if (jhiq19 == jhlq19) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+            if (jhiq20 == jhlq20) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq21 == jhlq21) {
+
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+            }
+
+            if (jhiq22 == jhlq22) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq23 == jhlq23) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq24 == jhlq24) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+                GenerateRandom();
+
+            }
+
+            if (jhiq25 == jhlq25) {
+
+                wrong = 0; //wrong answers
+                score = score + 2;
+                count++; //correct answers
+
+
+            }
+
+
+
+
+
+            if (score < 45) {
+                fail.play();
+
+                alert("OOOh Nooo your score = " + score + "    please press OK to Again");
+                window.location = "HardLevel.html";
+
+            }
+            if (score >= 45) {
+
+                document.body.style.backgroundImage = "url('images / firework - m.gif')";
+                win.play();
+                setTimeout(() => ImgWin(), 100);
+
+            }
+
+        };
+
+        function ImgWin() {
+            alert(" Bravooooo !! your score = " + score + "    You are completed all level  Press OK to again this level");
+
+            window.location = "HardLevel.html";
+        }
+
+
+
+        function GenerateRandom() {
+            randomNumber1 = Math.floor(Math.random() * 10 + 5)
+            randomNumber2 = Math.floor(Math.random() * 5 + 1)
+            randomNumber2 = Math.floor(Math.random() * 5 + 1)
+
+        }
+
+
+
+
+    </script>-->
+    <!--<script>
+
+
+
+
+        var fail = new Audio('Audio/Audio_fail.mp3');
+        var win = new Audio('Audio/Audio_win.mp3');
+
+        var score = 0;
+        var count = 0;
+
+        var randomNumber1 = Math.round(Math.random() * 10) + 5;
+        var randomNumber2 = Math.round(Math.random() * 5) + 1;
+        var randomNumber3 = Math.floor(Math.random() * 5) + 1;
+
+        document.getElementById('hlq1').innerHTML = randomNumber1 + '*' + randomNumber2 + '-' + randomNumber3;
+        var jhlq1 = randomNumber1 * randomNumber2 - randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq2').innerHTML = randomNumber1 + '/' + randomNumber2 + '+' + randomNumber3;
+        var jhlq2 = randomNumber1 / randomNumber2 + randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq3').innerHTML = randomNumber1 + '*' + randomNumber2 + '-' + randomNumber3;
+        var jhlq3 = randomNumber1 * randomNumber2 - randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq4').innerHTML = randomNumber1 + '/' + randomNumber2 + '+' + randomNumber3;
+        var jhlq4 = randomNumber1 / randomNumber2 + randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq5').innerHTML = randomNumber1 + '-' + randomNumber2 + '+' + randomNumber3;
+        var jhlq5 = randomNumber1 - randomNumber2 + randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq6').innerHTML = randomNumber1 + '+' + randomNumber2 + '-' + randomNumber3;
+        var jhlq6 = randomNumber1 + randomNumber2 - randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq7').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq7 = randomNumber1 * randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq8').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq8 = randomNumber1 / randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq9').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq9 = randomNumber1 * randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq10').innerHTML = randomNumber1 + '-' + randomNumber2 + '+' + randomNumber3;
+        var jhlq10 = randomNumber1 - randomNumber2 + randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq11').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq11 = randomNumber1 * randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq12').innerHTML = randomNumber1 + '/' + randomNumber2 + '+' + randomNumber2;
+        var jhlq12 = randomNumber1 / randomNumber2 + randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq13').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq13 = randomNumber1 * randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq14').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq14 = randomNumber1 / randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq15').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq15 = randomNumber1 - randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq16').innerHTML = randomNumber1 + '+' + randomNumber2;
+        var jhlq16 = randomNumber1 + randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq17').innerHTML = randomNumber1 + '*' + randomNumber2 + '-' + randomNumber3;
+        var jhlq17 = randomNumber1 * randomNumber2 - randomNumber3;
+
+        GenerateRandom();
+        document.getElementById('hlq18').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq18 = randomNumber1 / randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq19').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq19 = randomNumber1 * randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq20').innerHTML = randomNumber1 + '-' + randomNumber2;
+        var jhlq20 = randomNumber1 - randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq21').innerHTML = randomNumber1 + '*' + randomNumber2;
+        var jhlq21 = randomNumber1 * randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq22').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq22 = randomNumber1 / randomNumber2;
+
+        GenerateRandom();
+        document.getElementById('hlq23').innerHTML = randomNumber1 + '*' + randomNumber2 + '*' + randomNumber3;
+        var jhlq23 = randomNumber1 * randomNumber2 * randomNumber3;
+        GenerateRandom();
+        document.getElementById('hlq24').innerHTML = randomNumber1 + '/' + randomNumber2;
+        var jhlq24 = randomNumber1 / randomNumber2;
+        GenerateRandom();
+        document.getElementById('hlq25').innerHTML = randomNumber1 + '-' + randomNumber2 + '*' + randomNumber3;
+        var jhlq25 = randomNumber1 - randomNumber2 * randomNumber3;
+
+
+
+        const Game = () => {
+            var jhiq1 = document.getElementById('hiq1').value;
+            var jhiq2 = document.getElementById('hiq2').value;
+            var jhiq3 = document.getElementById('hiq3').value;
+            var jhiq4 = document.getElementById('hiq4').value;
+            var jhiq5 = document.getElementById('hiq5').value;
+            var jhiq6 = document.getElementById('hiq6').value;
+            var jhiq7 = document.getElementById('hiq7').value;
+            var jhiq8 = document.getElementById('hiq8').value;
+            var jhiq9 = document.getElementById('hiq9').value;
+            var jhiq10 = document.getElementById('hiq10').value;
+            var jhiq11 = document.getElementById('hiq11').value;
+            var jhiq12 = document.getElementById('hiq12').value;
+            var jhiq13 = document.getElementById('hiq13').value;
+            var jhiq14 = document.getElementById('hiq14').value;
+            var jhiq15 = document.getElementById('hiq15').value;
+            var jhiq16 = document.getElementById('hiq16').value;
+            var jhiq17 = document.getElementById('hiq17').value;
+            var jhiq18 = document.getElementById('hiq18').value;
+            var jhiq19 = document.getElementById('hiq19').value;
+            var jhiq20 = document.getElementById('hiq20').value;
+            var jhiq21 = document.getElementById('hiq21').value;
+            var jhiq22 = document.getElementById('hiq22').value;
+            var jhiq23 = document.getElementById('hiq23').value;
+            var jhiq24 = document.getElementById('hiq24').value;
+            var jhiq25 = document.getElementById('hiq25').value;
+
+            if (jhiq1 == jhlq1) {
+
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+            }
+
+            if (jhiq2 == jhlq2) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq3 == jhlq3) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq4 == jhlq4) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq5 == jhlq5) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+
+            if (jhiq6 == jhlq6) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+            }
+            if (jhiq7 == jhlq7) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+            if (jhiq8 == jhlq8) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+            if (jhiq9 == jhlq9) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+            if (jhiq10 == jhlq10) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+            if (jhiq11 == jhlq11) {
+
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+            }
+
+            if (jhiq12 == jhlq12) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq13 == jhlq13) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq14 == jhlq14) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq15 == jhlq15) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+
+            if (jhiq16 == jhlq16) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+            }
+            if (jhiq17 == jhlq17) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+            if (jhiq18 == jhlq18) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+            if (jhiq19 == jhlq19) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+            if (jhiq20 == jhlq20) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq21 == jhlq21) {
+
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+            }
+
+            if (jhiq22 == jhlq22) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq23 == jhlq23) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq24 == jhlq24) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+                NewRandom()
+
+            }
+
+            if (jhiq25 == jhlq25) {
+
+                wrong = 0;
+                score = score + 2;
+                count++;
+
+
+            }
+
+
+
+
+
+            if (score < 45) {
+                fail.play();
+
+                alert("OOOh Nooo your score = " + score + "    please press OK to Again");
+                window.location = "HardLevel.html";
+
+            }
+            if (score >= 45) {
+
+                document.body.style.backgroundImage = "url('images/firework-m.gif')";
+                win.play();
+                setTimeout(() => firwork(), 100);
+
+            }
+
+        };
+
+        function firwork() {
+            alert(" Bravooooo !! your score = " + score + "    You are completed all level  Press OK to again this level");
+
+            window.location = "HardLevel.html";
+        }
+
+
+
+        function NewRandom() {
+            randomNumber1 = Math.floor(Math.random() * 10 + 5)
+            randomNumber2 = Math.floor(Math.random() * 5 + 1)
+            randomNumber2 = Math.floor(Math.random() * 5 + 1)
+
+        }
+
+
+
+
+    </script>-->
+    <!--<script>
+
+            var win = new Audio('Audio/Audio_win.mp3');
+            var fail = new Audio('Audio/Audio_fail.mp3');
+
+    var randomNo1 = Math.round(Math.random() * 5) + 5;
+    var randomNo2 = Math.round(Math.random() * 5) + 1;
+    var randomNo3 = Math.floor(Math.random() * 5) + 1;
+
+    document.getElementById('hlq1' ).innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq1 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq2' ).innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq2 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq3' ).innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq3 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq4' ).innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq4 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq5' ).innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq5 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq6' ).innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq6 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq7' ).innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq7 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq8' ).innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq8 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq9' ).innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq9 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq10').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq10 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq11').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq11 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq12').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq12 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq13').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq13 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq14').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq14 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq15').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq15 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq16').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq16 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq17').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq17 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq18').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq18 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq19').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq19 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq20').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq20 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq21').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq21 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq22').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq22 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq23').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq23 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq24').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+            var jhlq24 = randomNo1 * randomNo2 - randomNo3;
+            NewRandom();
+    document.getElementById('hlq25').innerHTML = randomNo1 + "  *  " + randomNo2 + "  -  " + randomNo3;
+    var jhlq25 = randomNo1 * randomNo2 - randomNo3;
+
+
+
+
+        const Game = () => {
+        var jhiq1  = document.getElementById("hiq1 ").value;
+        var jhiq2  = document.getElementById("hiq2 ").value;
+        var jhiq3  = document.getElementById("hiq3 ").value;
+        var jhiq4  = document.getElementById("hiq4 ").value;
+        var jhiq5  = document.getElementById("hiq5 ").value;
+        var jhiq6  = document.getElementById("hiq6 ").value;
+        var jhiq7  = document.getElementById("hiq7 ").value;
+        var jhiq8  = document.getElementById("hiq8 ").value;
+        var jhiq9  = document.getElementById("hiq9 ").value;
+        var jhiq10 = document.getElementById("hiq10").value;
+        var jhiq11 = document.getElementById("hiq11").value;
+        var jhiq12 = document.getElementById("hiq12").value;
+        var jhiq13 = document.getElementById("hiq13").value;
+        var jhiq14 = document.getElementById("hiq14").value;
+        var jhiq15 = document.getElementById("hiq15").value;
+        var jhiq16 = document.getElementById("hiq16").value;
+        var jhiq17 = document.getElementById("hiq17").value;
+        var jhiq18 = document.getElementById("hiq18").value;
+        var jhiq19 = document.getElementById("hiq19").value;
+        var jhiq20 = document.getElementById("hiq20").value;
+        var jhiq21 = document.getElementById("hiq21").value;
+        var jhiq22 = document.getElementById("hiq22").value;
+        var jhiq23 = document.getElementById("hiq23").value;
+        var jhiq24 = document.getElementById("hiq24").value;
+        var jhiq25 = document.getElementById("hiq25").value;
+
+        if (jhiq1 == jhlq1) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq2 == jhlq2) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq3 == jhlq3) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq4 == jhlq4) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq5 == jhlq5) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq6 == jhlq6) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq7 == jhlq7) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq8 == jhlq8) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq9 == jhlq9) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq10 == jhlq10) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq11 == jhlq11) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq12 == jhlq12) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq13 == jhlq13) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq14 == jhlq14) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq15 == jhlq15) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq16 == jhlq16) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq17 == jhlq17) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq18 == jhlq18) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq19 == jhlq19) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq20 == jhlq20) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq21 == jhlq21) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq22 == jhlq22) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq23 == jhlq23) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq24 == jhlq24) {
+            score = score + 2;
+            NewRandom();
+        }
+        if (jhiq25 == jhlq25) {
+                score = score + 2;
+
+        }
+        if (score < 45) {
+            /* xx.innerText = "Score =" + score;*/
+            fail.play();
+            alert("Game over Your Score is :   " + score + "     Press OK to again Hard Level");
+
+
+        }
+            if (score >= 45) {
+                win.play();
+                document.body.style.backgroundImage = "url('images/firework-m.gif')";
+                setTimeout(() => firwork(), 100);
+
+            /*window.Location = "HardLevel.html";*/
+
+        }
+
+            };
+
+            function NewRandom() {
+
+                 randomNo1 = Math.floor(Math.random() * 10 + 5)
+                 randomNo2 = Math.floor(Math.random() * 5 + 1)
+                 randomNo3 = Math.floor(Math.random() * 5 + 1)
+
+            }
+            function firwork() {
+                alert("Bravo Your Score is :   " + score + "    You are pass all levels , Press OK to Again Easy Level");
+                window.location.href("HardLevel.html");
+            }
+        </script>-->
+</body>
+</html>

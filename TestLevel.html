@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Test Level</title>
+    <link rel="icon" type="image/x-icon" href="images/icons8-q-64.png">
+    <link href="StyleSheet1.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li id="im">
+                    <img src="images/navimg.jpg" width="200" />
+
+                </li>
+            </ul>
+            <ul>
+                <li><h1 id="hstyle"> Test Level</h1></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <h1>Please answer all the questions to move on the next level :</h1>
+        <div class="hnote">
+            <h1 id="rednote"><b>Note:</b> Your score at this level will determine the next level</h1>
+        </div>
+        <form method="post">
+            <fieldset class="fset1">
+                <legend>Test Level</legend>
+                <h3> Question 1 :</h3>
+                <label id="tlq1"><b></b></label>
+                <input id="tiq1" type="number" name="q1"  />
+                <br />
+                <br />
+                <h3> Question 2 :</h3>
+                <label id="tlq2"><b></b></label>
+                <input id="tiq2" type="number" name="q2"  />
+                <br />
+                <br />
+                <h3> Question 3 :</h3>
+                <label id="tlq3"><b></b></label>
+                <input id="tiq3" type="number" name="q3"  />
+                <br />
+                <br />
+                <h3> Question 4 :</h3>
+                <label id="tlq4"><b></b></label>
+                <input id="tiq4" type="number" name="q4"  />
+                <br />
+                <br />
+                <h3> Question 5 :</h3>
+                <label id="tlq5"><b></b></label>
+                <input id="tiq5" type="number" name="q5"  />
+                <br />
+                <br />
+
+
+
+
+                <br />
+                <br />
+                <!--tCheckInput1() tCheckInput2() tCheckInput3() tCheckInput4() tCheckInput5()-->
+               
+                
+                <input type="reset" class="login-button" />
+            </fieldset>
+        </form>
+        <button class="login-button" onclick="Game()">Submit</button>
+
+        <!--<button onclick="myFunction()">Try it</button>
+
+        <p id="demo"></p>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myText").value;
+                document.getElementById("demo").innerHTML = x;
+            }
+        </script>-->
+
+    </main>
+    <script >
+
+        var score = 0;
+
+        var randomNo1 = Math.round(Math.random() * 10);
+        var randomNo2 = Math.round(Math.random() * 10);
+
+
+        document.getElementById('tlq1').innerHTML = randomNo1 + "  +  " + randomNo2 ;
+        var jtlq1 = randomNo1 + randomNo2; 
+        NewRandom(); 
+        document.getElementById('tlq2').innerHTML = randomNo1 + "  -  " + randomNo2;
+        var jtlq2 = randomNo1 - randomNo2;
+        NewRandom();
+        document.getElementById('tlq3').innerHTML = randomNo1 + "  +  " + randomNo2;
+        var jtlq3 = randomNo1 + randomNo2;
+        NewRandom();
+        document.getElementById('tlq4').innerHTML = randomNo1 + "  -  " + randomNo2;
+        var jtlq4 = randomNo1 - randomNo2;
+        NewRandom();
+        document.getElementById('tlq5').innerHTML = randomNo1 + "  +  " + randomNo2;
+        var jtlq5 = randomNo1 + randomNo2;
+        NewRandom();
+      
+
+        const Game = () => {
+
+            var jtiq1 = document.getElementById("tiq1").value;
+            var jtiq2 = document.getElementById("tiq2").value;
+            var jtiq3 = document.getElementById("tiq3").value;
+            var jtiq4 = document.getElementById("tiq4").value;
+            var jtiq5 = document.getElementById("tiq5").value;
+
+
+            if (jtiq1 == jtlq1) {
+                score = score + 2;
+
+            }
+            if (jtiq2 == jtlq2) {
+                score = score + 2;
+
+            }
+            if (jtiq3 == jtlq3) {
+                score = score + 2;
+
+            }
+            if (jtiq4 == jtlq4) {
+                score = score + 2;
+
+            }
+            if (jtiq5 == jtlq5) {
+                score = score + 2;
+
+            }
+            if (score <= 5) {
+                /* xx.innerText = "Score =" + score;*/
+                alert("Bravo Your Score is :   " + score + "     Press OK to move Easy Level");
+                window.location = "EasyLevel.html";
+            }
+            if (score > 5 && score <= 7) {
+                alert("Bravo Your Score is :   " + score + "     Press OK to move Intermediate Level");
+                window.location = "IntermediateLevel.html";
+            }
+            if (score > 7) {
+                alert("Bravo Your Score is :   " + score + "     Press OK to move Hard Level");
+                /*window.Location = "HardLevel.html";*/
+                window.location = "HardLevel.html";
+            }
+
+        };
+        function NewRandom() {
+
+            randomNo1 = Math.floor(Math.random() * 10 + 1)
+            randomNo2 = Math.floor(Math.random() * 5 + 1)
+
+        }
+
+    </script>
+
+</body>
+</html>

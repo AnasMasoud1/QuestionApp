@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="images/icons8-q-64.png" >
+    <link href="StyleSheet1.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Fastroware</h1>
+        <div class="card">
+            <form>
+                <img id="logimg" src="images/loginImg.png" />
+                <input type="text" placeholder="Username">
+                <input type="number" placeholder="Age">
+                <div class="buttons">
+                    <!--<a href="TestLevel.html">TestLevel.html</a>-->
+
+                    <!--<button id="start" class="login-button" onclick="GoTest()">Start Game</button>-->
+
+                    <input class="login-button" type="button" value="Start Game" onclick="GoTest()">
+                </div>
+            </form>
+        </div>
+    </div>
+    <button onclick="myFunction()">Replace document</button>
+
+    <script>
+        function GoTest() {
+            window.location = "TestLevel.html";
+        }
+    </script>
+    <!--<script src="JavaScript.js"></script>-->
+</body>
+</html>
